@@ -87,6 +87,7 @@ app.put("/completed", (req, res) => {
 //// modifiction Completed tasks by task id (PUT / update)
 app.put("/completedId", (req, res) => {
   const task = req.body.id;
+  console.log(task);
   toDos.map((ele) => {
     if (task == ele.id) {
       ele.isCompleted === true;
